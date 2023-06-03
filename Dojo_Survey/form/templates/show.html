@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/show.css' %}" />
+    <title>Result</title>
+  </head>
+  <body>
+    <form class="form-group" action="/" method="post">
+      {% csrf_token %}
+      <h3>Submitted Info:</h3>
+      <label class="col-sm-2 col-form-label col-form-label-sm" for="name"
+        >Name:</label
+      >
+      <p>{{ name_on_template }}</p>
+      <label class="col-sm-2 col-form-label col-form-label-sm" for="city"
+        >City:</label
+      >
+      <p>{{ city_on_template }}</p>
+      <label class="col-sm-2 col-form-label col-form-label-sm" for="language"
+        >Language:</label
+      >
+      <p>{{ language_on_template }}</p>
+      <label class="col-sm-2 col-form-label col-form-label-sm" for="gender"
+        >Gender:</label
+      >
+      <p>{{ gender_on_template }}</p>
+      <label class="col-sm-2 col-form-label col-form-label-sm" for="comment"
+        >Comment:</label
+      >
+      <p>{{ comment_on_template }}</p>
+
+      <label class="col-sm-2 col-form-label col-form-label-sm" for="checkbox"
+        >Checkbox:</label
+      >
+      <p>{{ check_on_template }}</p>
+
+      <div class="bg-light text-right">
+        <button type="submit" class="btn btn-primary">Go Back</button>
+      </div>
+    </form>
+  </body>
+</html>
