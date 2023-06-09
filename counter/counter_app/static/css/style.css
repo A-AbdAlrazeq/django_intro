@@ -1,0 +1,21 @@
+* {
+  font-family: sans-serif;
+}
+form {
+  width: 900px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.Increment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="text"] {
+  width: fit-content;
+  margin: 5px;
+}
+p,
+h1 {
+  text-align: center;
+}
