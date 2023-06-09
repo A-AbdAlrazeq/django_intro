@@ -11,7 +11,7 @@ def create_user(request):
     language = request.POST['Language']
     gender = request.POST['gender']
     comment = request.POST['comment']
-    # fetch a value from ['Check'] name,if not exist ,will pass the default value "not checked"
+    # fetch a value from ['Check'] name,if not exist ,will pass the default value "not checked".
     check = request.POST.get('Check', "not checked")
     context = {
         "name_on_template": name,
